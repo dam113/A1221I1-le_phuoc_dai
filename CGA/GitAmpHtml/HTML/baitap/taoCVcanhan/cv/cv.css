@@ -1,0 +1,95 @@
+body{
+    background: #d9dbde;
+}
+.content{
+    margin: 10px 300px 0px 300px;
+    border: dimgray solid 0.1px;
+}
+.content-top{
+    display: flex;
+}
+.avata{
+    height: 250px;
+    background-color: darkgray;
+}
+#avata{
+    height: 250px;
+    width: 100%;
+    align-content: center;
+}
+.name{
+    height: 250px;
+    width: 100%;
+    background-color: #f59898;
+}
+.name h1{
+    margin: 50px 0px 0px 50px;
+    color: dimgray;
+}
+.name h3{
+    margin: 10px 0px 0px 50px;
+    color: dimgray;
+}
+.content-bottom{
+    display: flex;
+}
+.left{
+    height: 100%;
+    width: 400px;
+    text-align: justify;
+    background: #505c69;
+    color: #ffffff;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+a:hover{
+    color: #898d93;
+    text-decoration: none;
+}
+.lienhe, .muctieu, .chungchi, .giaithuong, .hocvan, .kynang, .sothich{
+    margin: 20px 20px 50px 20px;
+}
+.tieude{
+    border-bottom: #f59898 solid 2px;
+
+}
+#list{
+    font-size: 18px;
+    color: #f59898;
+}
+ul{
+    list-style-position: inside;
+    padding: 0px;
+}
+li{
+    font-size: 16px;
+}
+.right{
+    width: 100%;
+    background: #ffffff;
+}
+.hocvan, .kinhnghiem, .hoatdong{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.header{
+    display: table;
+    width: 100%;
+    background: #505c69;
+}
+.header h3{
+    padding-left: 10px;
+    display: table-cell;
+    color: #ffffff;
+    height: 40px;
+    vertical-align: middle;
+}
+.note h3{
+    color: #505c69;
+}
+.right p{
+    font-size: 16px;
+}
+
