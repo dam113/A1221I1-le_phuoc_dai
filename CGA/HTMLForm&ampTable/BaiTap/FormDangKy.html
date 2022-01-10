@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .name, .email, .gender{
+            margin-bottom: 10px;
+        }
+        p{
+            height: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="FormDangKy.html" method="post">
+        <div class="name">
+            <div>
+                <label>Họ và tên:</label>
+            </div>
+            <input type="text" name="username" required>
+        </div>
+        <div class="email">
+            <div>
+                <label>Email:</label>
+            </div>
+            <input type="email" name="email" required>
+        </div>
+        <div class="phone">
+            <div>
+                <label>Số điện thoại:</label>
+            </div>
+            <input type="text" name="phone" required>
+        </div>
+        <div class="gender">
+            <p>Giới tính:</p>
+            <input type="radio" name="gender" id="nam">
+            <label for="nam">Nam</label>
+            <input type="radio" name="gender" id="nu">
+            <label for="nu">Nu</label>
+        </div>
+        <div class="submit">
+            <input type="submit" value="Đăng ký">
+        </div>
+    </form>
+</body>
+</html>
