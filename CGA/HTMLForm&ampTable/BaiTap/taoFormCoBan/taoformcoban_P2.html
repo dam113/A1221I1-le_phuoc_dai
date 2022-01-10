@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form cơ bản - Phần 1</title>
+    <style>
+        h1{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        input, textarea, select{
+            box-shadow: inset 0px 0.5px 0.5px black;
+        }
+        .header{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/taoformcoban_P2.html" method="post" style="width: 500px; height: auto; background: bisque">
+        <div class="header">
+            <h1 style="width: 480px; height: 50px; margin: 5px; color: #00008a; background: #cee7ff">ĐĂNG KÝ HỌC VIÊN</h1>
+        </div>
+        <div style="margin: 10px">
+            <div>
+                <label>Họ và tên</label>
+                <input type="text" name="name" size="30" style="height: 20px; margin-left: 10px; margin-top: 10px">
+            </div>
+            <div>
+                <label>Ngày sinh</label>
+                <input type="text" name="date" style="height: 20px; margin-left: 7px; margin-top: 10px">
+            </div>
+            <div style="display: flex; width: 400px">
+                <div style="width: 100px">
+                    <p>Giới tính</p>
+                </div>
+                <div style="width: 300px; margin-top: 15px; margin-left: -20px">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Nam</label>
+                    <input type="radio" name="gender" id="Female">
+                    <label for="Female">Nữ</label>
+                </div>
+            </div>
+            <div style="margin-top: 5px">
+                <label>Địa chỉ</label>
+                <textarea cols="30px" rows="5px" style="vertical-align: middle; margin-left: 25px"></textarea>
+            </div>
+            <div class="class" style="margin-top: 10px">
+                <label>Lớp</label>
+                <select style="margin-left: 45px;">
+                    <option elected>--chọn lớp--</option>
+                    <option>lớp 2</option>
+                    <option>lớp 3</option>
+                    <option>lớp 4</option>
+                </select>
+            </div>
+            <div style="margin-top: 10px">
+                <label>Email</label>
+                <input type="email" name="email" style="margin-left: 33px">
+            </div>
+            <div style="margin-top: 10px">
+                <label>Điện thoại</label>
+                <input type="text" name="phone" style="margin-left: 5px">
+            </div>
+            <div style="display: flex; margin-left: 50px; margin-top: 10px">
+                <div>
+                    <input type="button" name="signin" value="Đăng ký" onclick="alert('hello word!!')">
+                </div>
+                <div style="margin-left: 5px">
+                    <input type="submit" name="signin" value="nhập lại">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

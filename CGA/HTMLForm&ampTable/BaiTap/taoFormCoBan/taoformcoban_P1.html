@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form cơ bản - Phần 1</title>
+    <style>
+        body{
+            width: 500px;
+            height: auto;
+            margin: 20px;
+        }
+        h1{
+            display: table-cell;
+            height: 50px;
+            width: 500px;
+            background: coral;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .yourname, .email{
+            display: flex;
+            height: 30px;
+            width: 500px;
+            margin: 10px;
+            color: #5c5cf6;
+        }
+        .yourname input, .email input{
+            width: 250px;
+        }
+        .interest{
+            display: flex;
+            height: 50px;
+            width: 500px;
+        }
+        input{
+            margin-left: 20px;
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+            color: #000;
+        }
+        p{
+            margin: 5px;
+            color: #5c5cf6;
+        }
+        .checkbox{
+            width: 500px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <form action="/taoformcoban_P1.html" method="post" style="border: #898d93 solid 1px">
+        <div>
+            <h1>SỞ THÍCH CỦA BẠN</h1>
+        </div>
+        <div style="margin: 20px">
+            <div class="yourname">
+                <label><p>Họ và tên</p></label>
+                <input name="yourname" type="text">
+            </div>
+            <div class="email">
+                <label><p style="margin-left: 28px">Email</p></label>
+                <input name="email" type="email">
+            </div>
+            <div class="checkbox">
+                <div style="width: 80px">
+                    <p style="margin-left: 20px">Sở thích</p>
+                </div>
+                <div style="width: 400px">
+                    <div class="interest">
+                        <input id="thethao" type="checkbox">
+                        <label id="thethao">Thể thao</label>
+                        <input id="amnhac" type="checkbox">
+                        <label id="amnhac"> Âm nhạc</label>
+                        <input id="docsach" type="checkbox">
+                        <label id="docsach"> Đọc sách</label>
+                    </div>
+                    <div class="interest">
+                        <input id="dulich" type="checkbox">
+                        <label id="dulich"> du lịch</label>
+                        <input id="web" type="checkbox" style="margin-left: 30px">
+                        <label id="web"> lướt web</label>
+                        <input id="game" type="checkbox" style="margin-left: 25px">
+                        <label id="game"> chơi game</label>
+                    </div>
+                    <div class="interest">
+                        <input id="dienanh" type="checkbox">
+                        <label id="dienanh"> điện ảnh</label>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 100px">
+                <button style="box-shadow: 0px 2px 2px black;">
+                    Gửi thông tin
+                </button>
+                <button style="margin-left: 20px; box-shadow: 0px 2px 2px black;">
+                    nhập lại
+                </button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
