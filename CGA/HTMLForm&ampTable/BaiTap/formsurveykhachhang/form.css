@@ -58,7 +58,10 @@ table, th, td{
 td>div{
     margin: 0px !important;
 }
-#color{
+thead>tr{
+    background: #d9dbde;
+}
+tbody>tr:nth-child(2n){
     background: #d9dbde;
 }
 #submit{
