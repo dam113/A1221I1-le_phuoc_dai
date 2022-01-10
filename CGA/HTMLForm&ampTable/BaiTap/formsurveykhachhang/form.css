@@ -1,0 +1,67 @@
+.infor{
+    border-bottom: 1px dotted #ccc;
+}
+ul{
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0px;
+}
+li{
+    margin: 0px 5px 10px 0px;
+}
+#age select, #income select{
+    height: 100%;
+    width: 400px;
+}
+label{
+    font-weight: bold;
+}
+fieldset{
+    border: none;
+    padding: 0px;
+}
+div{
+    margin-top: 5px;
+}
+#gender div>label, #products div>label, #date div>label{
+    font-weight: normal !important;
+}
+#money p{
+    height: 5px;
+    font-weight: bold;
+}
+.money {
+    display: flex;
+}
+.dollars div>label, .cents div>label{
+    font-weight: normal !important;
+    margin-left: 10px;
+}
+.dollars div>input, .cents div>input{
+    height: 100%;
+    width: 50px;
+}
+textarea{
+    height: 80px;
+    width: 600px;
+}
+#note p{
+    height: 5px;
+    font-weight: bold;
+}
+table, th, td{
+    border-collapse: collapse;
+    border: 0.5px solid #898d93;
+    text-align: center;
+    padding: 5px;
+}
+td>div{
+    margin: 0px !important;
+}
+#color{
+    background: #d9dbde;
+}
+#submit{
+    height: 20px;
+    width: 100px;
+}

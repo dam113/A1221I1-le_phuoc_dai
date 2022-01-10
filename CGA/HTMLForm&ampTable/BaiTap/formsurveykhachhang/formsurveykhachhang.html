@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+<form action="formsurveykhachhang.html" method="post">
+    <header class="infor">
+        <h1>Market Research Survey</h1>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+    </header>
+    <ul>
+        <li id="age">
+            <label>What is your age range?</label>
+            <div>
+                <select>
+                    <option>18-24</option>
+                    <option>25-34</option>
+                    <option>35-50</option>
+                    <option>50+</option>
+                </select>
+            </div>
+        </li>
+        <li id="income">
+            <label>What is your yearly income range?</label>
+            <div>
+                <select>
+                    <option>$0-$25,000</option>
+                    <option>$25,001-$50,000</option>
+                    <option>$50,001-$100,000</option>
+                    <option>$100,001+</option>
+                </select>
+            </div>
+        </li>
+        <li id="gender">
+            <fieldset>
+                <label>
+                    Gender Identity
+                </label>
+                <div>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                </div>
+            </fieldset>
+        </li>
+        <li id="products">
+            <fieldset>
+                <label>
+                    Which of the following products have your purchased in the last 2 months. Please check all that apply.
+                </label>
+                <div>
+                    <input type="checkbox" name="product" id="p1">
+                    <label for="p1">Product 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="product" id="p2">
+                    <label for="p2">Product 2</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="product" id="p3">
+                    <label for="p3">Product 3</label>
+                </div>
+            </fieldset>
+        </li>
+        <li id="date">
+            <fieldset>
+                <label>
+                    How often would you use our new product?
+                </label>
+                <div>
+                    <input type="radio" name="date" id="dayly">
+                    <label for="dayly">Dayly</label>
+                </div>
+                <div>
+                    <input type="radio" name="date" id="weekly">
+                    <label for="weekly">Weekly</label>
+                </div>
+                <div>
+                    <input type="radio" name="date" id="mouthly">
+                    <label for="mouthly">Mouthly</label>
+                </div>
+            </fieldset>
+        </li>
+        <li id="money">
+            <p>What would you pay for the new product?</p>
+            <div class="money">
+                <div class="dollars">
+                    <div>
+                        $ <input type="text" name="dollars" id="dollar">
+                    </div>
+                    <div>
+                        <label for="dollar">Dollars</label>
+                    </div>
+                </div>
+                <div class="cents">
+                    <div>
+                        &nbsp . &nbsp<input type="text" name="cents" id="cent">
+                    </div>
+                    <div>
+                        <label for="cent">Cents</label>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li id="note">
+            <p>What features would you like to see in the new product.</p>
+            <div>
+                <textarea name="textarea" id="note"></textarea>
+            </div>
+        </li>
+        <li>
+            <p>Please rate your level of agreement with the following statements.</p>
+            <div>
+                <table>
+                    <thead>
+                        <tr id="color">
+                            <th></th>
+                            <th>Strongly Disagree</th>
+                            <th>Disagree</th>
+                            <th>Agree</th>
+                            <th>Strongly Agree</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Our product are priced fairly
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate1" id="1">
+                                <div>
+                                    <label for="1">1</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate2" id="2">
+                                <div>
+                                    <label for="2">2</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate3" id="3">
+                                <div>
+                                    <label for="3">3</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate 4" id="4">
+                                <div>
+                                    <label for="4">4</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="color">
+                            <td>
+                                Our product are high quality
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate1" id="1">
+                                <div>
+                                    <label for="1">1</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate2" id="2">
+                                <div>
+                                    <label for="2">2</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate3" id="3">
+                                <div>
+                                    <label for="3">3</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate 4" id="4">
+                                <div>
+                                    <label for="4">4</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                You would recommend our product to a friend or coworker.
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate1" id="1">
+                                <div>
+                                    <label for="1">1</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate2" id="2">
+                                <div>
+                                    <label for="2">2</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate3" id="3">
+                                <div>
+                                    <label for="3">3</label>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="checkbox" name="rate 4" id="4">
+                                <div>
+                                    <label for="4">4</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </li>
+        <li>
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </li>
+
+    </ul>
+</form>
+</body>
+</html>
