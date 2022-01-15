@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+    <input type="text" id="rHinhTron">
+    <input type="submit" onclick="sAndC()">
+    <script>
+        function sAndC(){
+            let r = Number(document.getElementById('rHinhTron').value);
+            const pi = 3.14;
+            let s = pi * r * r;
+            let c = 2 * pi * r;
+
+            document.write('<h3>Bài 3: Tính diện tích hình tròn</h3><br>');
+            document.write('Diên tích hình tròn là: ' + s + '<br>');
+
+            document.write('<h3>Bài 3: Tính diện tích hình tròn</h3><br>');
+            document.write('Chu vi hình tròn là: ' + c + '<br>');
+
+        }
+    </script>
+</body>
+</html>
