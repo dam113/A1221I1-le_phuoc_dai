@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        .content{
+            display: flex;
+        }
+        label{
+            font-weight: bold;
+        }
+        .m2{
+            margin-right: 20px;
+        }
+        input{
+            width: 200px;
+        }
+        select{
+            width: 200px;
+        }
+        button{
+            background: #5c5cf6;
+            font-size: 14px;
+            color: white;
+            box-shadow: inset 1px 1px #cecccc;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .result{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <H1>Ứng dụng chuyển đổi tiền tệ</H1>
+    <form action="ungDungChuyenDoiTienTe.html" method="post" onsubmit="return false">
+        <div class="content">
+            <div class="m2">
+                <div>
+                    <label for="amount">Amount</label>
+                </div>
+                <input type="text" name="amount" id="amount">
+            </div>
+            <div class="m2">
+                <div>
+                    <label for="formCurrency">From Currency</label>
+                </div>
+                <select id="formCurrency" name="formCurrency">
+                    <option value="1">VietNam</option>
+                    <option value="2">USD</option>
+                </select>
+            </div>
+            <div class="m2">
+                <div>
+                    <label for="toCurrency">To Currency</label>
+                </div>
+                <select id="toCurrency" name="toCurrency">
+                    <option value="2">USD</option>
+                    <option value="1">VietNam</option>
+                </select>
+            </div>
+            <div class="m2">
+                <button onclick="convert()">
+                    Convert
+                </button>
+            </div>
+        </div>
+        <div class="result">
+            <p>Result:</p><p id="result"></p>
+        </div>
+    </form>
+    <script>
+        function convert() {
+            let a = Number(document.getElementById('amount').value);
+            let from = Number(document.getElementById('formCurrency').value);
+            let to = Number(document.getElementById('toCurrency').value);
+            if(from == 1){
+                if (to == 1){
+                    // document.write('Result:' + a);
+                    document.getElementById("result").innerHTML = ' ' + a;
+                }else{
+                    document.getElementById("result").innerHTML = ' ' + (a * 23000);
+                    // document.write('Result:' + (a * 23000));
+                }
+            }else {
+                if (to == 1){
+                    document.getElementById("result").innerHTML = ' ' + (a / 23000);
+                    // document.write('Result:' + (a / 23000));
+                }else{
+                    document.getElementById("result").innerHTML = ' ' + a;
+                    // document.write('Result:' + a );
+                }
+            }
+        }
+    </script>
+</body>
+</html>

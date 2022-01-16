@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+    <style>
+        body{
+            padding: 50px;
+        }
+        .button-form{
+            margin-top: 10px;
+        }
+        .result-form{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <form action="ungDungMayTinh.html" method="post" onsubmit="return false">
+        <div class="input-from">
+            <input type="text" id="number1">
+            <input type="text" id="number2">
+        </div>
+        <div class="button-form">
+            <button onclick="sum()">Addtion(+)</button>
+            <button onclick="subtra()">Subtration(-)</button>
+            <button onclick="multipli()">Multiplication(X)</button>
+            <button onclick="divis()">Division(/)</button>
+        </div>
+        <div class="result-form">
+            Result <p id="result-form"></p>
+        </div>
+    </form>
+<script>
+    function sum(){
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+
+        let C = number1 + number2;
+
+        document.getElementById("result-form").innerHTML = ' sum :' + C;
+    }
+    function subtra(){
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+
+        let C = number1 - number2;
+
+        document.getElementById("result-form").innerHTML = ' subtration :' + C;
+    }
+    function multipli(){
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+
+        let C = number1 * number2;
+
+        document.getElementById("result-form").innerHTML = ' multiplication :' + C;
+    }
+    function divis(){
+        let number1 = Number(document.getElementById("number1").value);
+        let number2 = Number(document.getElementById("number2").value);
+
+        let C = number1 / number2;
+
+        document.getElementById("result-form").innerHTML = ' division :' + C;
+    }
+</script>
+</body>
+</html>
