@@ -78,17 +78,17 @@
             if(from == 1){
                 if (to == 1){
                     // document.write('Result:' + a);
-                    document.getElementById("result").innerHTML = ' ' + a;
+                    document.getElementById("result").innerHTML = ' ' + a + 'VND';
                 }else{
-                    document.getElementById("result").innerHTML = ' ' + (a * 23000);
+                    document.getElementById("result").innerHTML = ' ' + (a / 23000) + 'VND';
                     // document.write('Result:' + (a * 23000));
                 }
             }else {
                 if (to == 1){
-                    document.getElementById("result").innerHTML = ' ' + (a / 23000);
+                    document.getElementById("result").innerHTML = ' ' + (a * 23000) + 'dola';
                     // document.write('Result:' + (a / 23000));
                 }else{
-                    document.getElementById("result").innerHTML = ' ' + a;
+                    document.getElementById("result").innerHTML = ' ' + a + 'dola';
                     // document.write('Result:' + a );
                 }
             }
