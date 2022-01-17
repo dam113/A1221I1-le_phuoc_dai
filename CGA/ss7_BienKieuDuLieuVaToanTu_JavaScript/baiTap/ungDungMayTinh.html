@@ -4,66 +4,97 @@
     <meta charset="UTF-8">
     <title>Ứng dụng máy tính</title>
     <style>
-        body{
+        body {
             padding: 50px;
         }
-        .button-form{
+
+        .button-form {
             margin-top: 10px;
         }
-        .result-form{
+
+        .result-form {
             display: flex;
         }
     </style>
 </head>
 <body>
-    <form action="ungDungMayTinh.html" method="post" onsubmit="return false">
-        <div class="input-from">
-            <input type="text" id="number1">
-            <input type="text" id="number2">
-        </div>
-        <div class="button-form">
-            <button onclick="sum()">Addtion(+)</button>
-            <button onclick="subtra()">Subtration(-)</button>
-            <button onclick="multipli()">Multiplication(X)</button>
-            <button onclick="divis()">Division(/)</button>
-        </div>
-        <div class="result-form">
-            Result <p id="result-form"></p>
-        </div>
-    </form>
+<form action="ungDungMayTinh.html" method="post" onsubmit="return false">
+    <div class="input-from">
+        <input type="text" id="number1">
+        <input type="text" id="number2">
+    </div>
+    <div class="button-form">
+        <!-- cách 1 -->
+        <!--            <button onclick="sum()">Addtion(+)</button>-->
+        <!--            <button onclick="subtra()">Subtration(-)</button>-->
+        <!--            <button onclick="multipli()">Multiplication(X)</button>-->
+        <!--            <button onclick="divis()">Division(/)</button>-->
+
+        <!-- cách 2 -->
+        <button onclick="caculate('add')">Addtion(+)</button>
+        <button onclick="caculate('sub')">Subtration(-)</button>
+        <button onclick="caculate('mul')">Multiplication(X)</button>
+        <button onclick="caculate('div')">Division(/)</button>
+    </div>
+    <div class="result-form">
+        <p>Result: </p>
+        <p id="result-form"></p>
+    </div>
+</form>
 <script>
-    function sum(){
+    // Cách 2
+    function caculate(o) {
         let number1 = Number(document.getElementById("number1").value);
         let number2 = Number(document.getElementById("number2").value);
-
-        let C = number1 + number2;
-
-        document.getElementById("result-form").innerHTML = ' sum :' + C;
+        if (o == 'add') {
+            let C = number1 + number2;
+            document.getElementById("result-form").innerHTML = ' sum :' + C;
+        } else if (o == 'sub'){
+            let C = number1 - number2;
+            document.getElementById("result-form").innerHTML = ' subtration :' + C;
+        } else if (o == 'mul'){
+            let C = number1 * number2;
+            document.getElementById("result-form").innerHTML = ' multiplication :' + C;
+        }else {
+            let C = number1 / number2;
+            document.getElementById("result-form").innerHTML = ' division :' + C;
+        }
     }
-    function subtra(){
-        let number1 = Number(document.getElementById("number1").value);
-        let number2 = Number(document.getElementById("number2").value);
 
-        let C = number1 - number2;
 
-        document.getElementById("result-form").innerHTML = ' subtration :' + C;
-    }
-    function multipli(){
-        let number1 = Number(document.getElementById("number1").value);
-        let number2 = Number(document.getElementById("number2").value);
-
-        let C = number1 * number2;
-
-        document.getElementById("result-form").innerHTML = ' multiplication :' + C;
-    }
-    function divis(){
-        let number1 = Number(document.getElementById("number1").value);
-        let number2 = Number(document.getElementById("number2").value);
-
-        let C = number1 / number2;
-
-        document.getElementById("result-form").innerHTML = ' division :' + C;
-    }
+    //cách 1
+    // function sum(){
+    //     let number1 = Number(document.getElementById("number1").value);
+    //     let number2 = Number(document.getElementById("number2").value);
+    //
+    //     let C = number1 + number2;
+    //
+    //     document.getElementById("result-form").innerHTML = ' sum :' + C;
+    // }
+    // function subtra(){
+    //     let number1 = Number(document.getElementById("number1").value);
+    //     let number2 = Number(document.getElementById("number2").value);
+    //
+    //     let C = number1 - number2;
+    //
+    //     document.getElementById("result-form").innerHTML = ' subtration :' + C;
+    // }
+    // function multipli(){
+    //     let number1 = Number(document.getElementById("number1").value);
+    //     let number2 = Number(document.getElementById("number2").value);
+    //
+    //     let C = number1 * number2;
+    //
+    //     document.getElementById("result-form").innerHTML = ' multiplication :' + C;
+    // }
+    // function divis(){
+    //     let number1 = Number(document.getElementById("number1").value);
+    //     let number2 = Number(document.getElementById("number2").value);
+    //
+    //     let C = number1 / number2;
+    //
+    //     document.getElementById("result-form").innerHTML = ' division :' + C;
+    // }
 </script>
 </body>
 </html>
