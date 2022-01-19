@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+</head>
+<body>
+<p>
+    Cửa hàng của bạn nhận gửi bán sản phẩm cho một công ty khác và sau mỗi tháng bạn cần tính toán số tiền hoa hồng bạn nhận được.<br>
+    Với mức hoa hồng theo doanh số bán hàng như sau:<br>
+    5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.<br>
+    10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.<br>
+    20 % nếu tổng doanh số là lớn hơn 300 triệu.<br>
+</p>
+<input type="text" id="tolal">
+<input type="submit" onclick="result()">
+<p id="turnover"></p>
+<script>
+    function result(){
+        let num = document.getElementById('tolal').value;
+        let tur = 0;
+        if (num <= 100){
+            tur = num*0.05;
+            document.getElementById('turnover').innerHTML = 'Số tiền hoa hồng của bạn = ' + tur;
+        }else if(num<=300){
+            tur = num*0.1;
+            document.getElementById('turnover').innerHTML = 'Số tiền hoa hồng của bạn = ' + tur;
+        }else {
+            tur = num*0.2;
+            document.getElementById('turnover').innerHTML = 'Số tiền hoa hồng của bạn = ' + tur;
+        }
+    }
+</script>
+</body>
+</html>

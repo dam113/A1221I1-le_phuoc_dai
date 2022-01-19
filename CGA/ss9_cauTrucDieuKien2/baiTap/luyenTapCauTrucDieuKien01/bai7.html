@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</title>
+</head>
+<body>
+<p>
+    Để tính cước điện thoại bàn cho một hộ gia đình với các thông số như sau:<br>
+
+    Phí thuê bao bắt buộc là 25 nghìn.<br>
+
+    600 đồng cho mỗi phút của 50 phút đầu tiên.<br>
+
+    400 đồng cho mỗi phút của 150 phút tiếp theo.<br>
+
+    200 đồng cho mỗi phút của 150 phút trở lên.<br>
+</p>
+<input type="text" id="minute">
+<input type="submit" onclick="result()">
+<p id="fee"></p>
+<script>
+    function result(){
+        let m = document.getElementById('minute').value;
+        if (m <= 50){
+            phi = m*600;
+        }else if(m <= 150){
+            phi = m*400;
+        }else {
+            phi = m*200;
+        }
+
+        if(phi > 25000){
+            document.getElementById('fee').innerHTML = 'Gia đình bạn đã gọi ' + m + ' phút cuộc gọi của gia đinh bạn là: ' + phi +' VND';
+        }else {
+            document.getElementById('fee').innerHTML = 'Gia đình bạn đã gọi ' + m + ' phút thuê bao bắt buộc 25000VND' ;
+        }
+    }
+</script>
+</body>
+</html>

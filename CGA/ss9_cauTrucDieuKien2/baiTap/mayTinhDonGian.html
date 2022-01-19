@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        .calculator{
+            width:400px;
+            margin:10px auto;
+        }
+        .calculator_keys {
+            width:100%;
+        }
+        div button{
+            width:23%;
+            height:30px;
+            margin-top:5px;
+            display: inline-block;
+        }
+        div .key-equal{
+            height:135px;
+            float:right;
+            margin-right:20px;
+        }
+        div button[data-action="clear"]{
+
+        }
+        .calculator_display{
+            width:95%;
+            border:1px solid black;
+            padding:5px 7px;
+            text-align:right;
+            border-radius:4px;
+        }
+        .is-depressed{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator_display" id="result">0</div>
+        <div class="calculator_keys">
+            <button class="key-operator" onclick="operator('+')">+</button>
+            <button class="key-operator" onclick="operator('-')">-</button>
+            <button class="key-operator" onclick="operator('*')">&times;</button>
+            <button class="key-operator" onclick="operator('/')">÷</button>
+            <button onclick="consTant(7)">7</button>
+            <button onclick="consTant(8)">8</button>
+            <button onclick="consTant(9)">9</button>
+            <button class="key-equal" onclick="perform('result')">=</button>
+            <button onclick="consTant(5)">5</button>
+            <button onclick="consTant(6)">6</button>
+            <button onclick="consTant(4)">4</button>
+            <button onclick="consTant(1)">1</button>
+            <button onclick="consTant(2)">2</button>
+            <button onclick="consTant(3)">3</button>
+            <button onclick="consTant(0)">0</button>
+            <button onclick="consTant('.')">.</button>
+            <button onclick="perform('clearn')">AC</button>
+        </div>
+    </div>
+    <script>
+        var expression = "";
+        function consTant(x){
+            expression = expression + x;
+        }
+        function operator(cal){
+            switch (cal){
+                case '+':
+                    expression = expression + '+'
+                    break;
+                case '-':
+                    expression = expression + '-'
+                    break;
+                case '*':
+                    expression = expression + '*'
+                    break;
+                case '/':
+                    expression = expression + '/'
+                    break;
+            }
+        }
+        function perform(x){
+            switch (x){
+                case 'result':
+                    var result = eval(expression);
+                    expression = "";
+                    document.getElementById("result").innerHTML = '' + result;
+                    break;
+                case 'clearn':
+                    document.getElementById("result").innerHTML = '' + 0;
+            }
+        }
+    </script>
+</body>
+</html>
