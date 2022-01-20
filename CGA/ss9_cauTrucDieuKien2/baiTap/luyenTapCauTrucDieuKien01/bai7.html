@@ -14,7 +14,7 @@
 
     400 đồng cho mỗi phút của 150 phút tiếp theo.<br>
 
-    200 đồng cho mỗi phút của 150 phút trở lên.<br>
+    200 đồng cho mỗi phút của 200 phút trở lên.<br>
 </p>
 <input type="text" id="minute">
 <input type="submit" onclick="result()">
@@ -24,10 +24,10 @@
         let m = document.getElementById('minute').value;
         if (m <= 50){
             phi = m*600;
-        }else if(m <= 150){
-            phi = m*400;
+        }else if(m <= 200){
+            phi = (m-50)*400 + 50*600;
         }else {
-            phi = m*200;
+            phi = (m-200)*200 + 150*400 + 50*600;
         }
 
         if(phi > 25000){
