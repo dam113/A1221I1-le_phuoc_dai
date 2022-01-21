@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<p>
+    Bậc 1: 4 triệu đồng/tháng 0%;<br>
+    Bậc 2: Trên 4 - 6 triệu đồng/tháng: 5%;<br>
+    Bậc 3: Trên 6 - 9 triệu đồng: 10%;<br>
+    Bậc 4: Trên 9 - 14 triệu đồng/tháng: 15%;<br>
+    Bậc 5: trên 14 - 24 triệu đồng/tháng: 20%;<br>
+    Bậc 6: Trên 24 - 44 triệu đồng/tháng: 25%;<br>
+    Bậc 7: Trên 44 - 84 triệu đồng/tháng: 30%;<br>
+    Bậc 8: Trên 84 triệu đồng: 35%.<br>
+</p>
+<script>
+    let mucLuong = Number(prompt('mức lương: '));
+    let snguoi = Number(prompt('số người giảm trừ: '));
+    let luong = mucLuong - snguoi * 1600000;
+    if (luong <= 4000000)
+        document.write("bạn không phải nộp thuế cá nhân");
+    else if (luong <= 6000000) {
+        thue = (luong - 4000000) * 5 / 100;
+        document.write("ban phai nop thue thu nhap ca nhan : "+ thue + "VND");
+    } else if (luong <= 9000000) {
+        thue = (6000000 - 4000000) * 5 / 100 + (luong - 6000000) * 10 / 100;
+        document.write("ban phai nop thue thu nhap ca nhan : "+ thue + "VND");
+    } else if (luong <= 14000000) {
+        thue = (6000000 - 4000000) * 5 / 100 + (9000000 - 6000000) * 10 / 100 + (luong - 9000000) * 15 / 100;
+        document.write("ban phai nop thue thu nhap ca nhan : "+ thue + "VND");
+    } else if (luong <= 24000000) {
+        thue = (6000000 - 4000000) * 5 / 100 + (9000000 - 6000000) * 10 / 100 + (14000000 - 9000000) * 15 / 100 + (luong - 14000000) * 20 / 100;
+        document.write("ban phai nop thue thu nhap ca nhan : "+ thue + "VND");
+    } else if (luong <= 44000000) {
+        thue = (6000000 - 4000000) * 5 / 100 + (9000000 - 6000000) * 10 / 100 + (14000000 - 9000000) * 15 / 100 + (24000000 - 14000000) * 20 / 100 + (luong - 24000000) * 25 / 100;
+        document.write("ban phai nop thue thu nhap ca nhan : "+ thue + "VND");
+    } else if (luong <= 84000000) {
+        thue = (6000000 - 4000000) * 5 / 100 + (9000000 - 6000000) * 10 / 100 + (14000000 - 9000000) * 15 / 100 + (24000000 - 14000000) * 20 / 100 + (44000000 - 24000000) * 25 / 100 + (luong - 44000000) * 30 / 100;
+        document.write("ban phai nop thue thu nhap ca nhan : "+ thue + " VND");
+    } else {
+        thue = (6000000 - 4000000) * 5 / 100 + (9000000 - 6000000) * 10 / 100 + (14000000 - 9000000) * 15 / 100 + (24000000 - 14000000) * 20 / 100 + (44000000 - 24000000) * 25 / 100 + (84000000 - 44000000) * 30 / 100 + (luong - 84000000) * 35 / 100;
+        document.write("ban phai nop thue thu nhap ca nhan : " + thue + " VND");
+    }
+</script>
+</body>
+</html>

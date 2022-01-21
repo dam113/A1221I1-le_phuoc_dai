@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2.</title>
+</head>
+<body>
+<script>
+    let a = Number(prompt('Nhập a: '));
+    let b = Number(prompt('Nhập b: '));
+    let c = Number(prompt('Nhập c: '));
+    let deta = b*b - 4*a*c;
+    if(deta < 0){
+        alert('phương trình vô nghiệm');
+    }else if(deta = 0){
+        x = (-b/2*a);
+        alert('phương trình có nghiệm kép = ' + x);
+    }else {
+        x1 = (-b + Math.sqrt(deta)) / (2*a);
+        x2 = (-b - Math.sqrt(deta)) / (2*a);
+        alert('phương trình có 2 nghiệm : x1 = ' + x1 + 'và x2 = ' + x2);
+    }
+
+</script>
+</body>
+</html>

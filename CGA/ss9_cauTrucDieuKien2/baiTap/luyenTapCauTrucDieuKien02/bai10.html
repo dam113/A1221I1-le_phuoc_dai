@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính giá điện.</title>
+</head>
+<body>
+<p>Viết chương trình tính tiền điện với chỉ số mới và chỉ số cũ Được nhập vào từ bàn phím.<br>
+    In ra màn hình chỉ số cũ, chỉ số mới và số tiền phải trả.<br>
+    Biết rằng: + 100 kWh đầu giá 1000<br>
+    + từ kWh 101 – 150 giá 1200 <br>
+    + từ kWh 151 – 200 giá 2000 <br>
+    + từ 201 trở lên giá 2500.</p>
+<label>Số mới</label>
+<input type="text" id="new-num">
+<label>Số cũ</label>
+<input type="text" id="old-num">
+<input type="submit" onclick="result()">
+<p id="total-money"></p>
+<script>
+    function result() {
+        let newNum = Number(document.getElementById('new-num').value);
+        let oldNum = Number(document.getElementById('old-num').value);
+        let consume = newNum - oldNum;
+        if (consume <= 100) {
+            tien = consume * 1000;
+        }else if (consume <= 150) {
+            tien = 100 * 1000 + (consume - 100) * 1200;
+        }else if (consume <= 200) {
+            tien = 100 * 1000 + 50 * 1200 + (consume - 150) * 2000;
+        }else{
+            tien = 100 * 1000 + 50 * 1200 + 50 * 2000 + (consume - 200) * 2500;
+        }
+        document.getElementById('total-money').innerHTML = 'Tiền phải trả = ' + tien + 'VND';
+    }
+</script>
+</body>
+</html>
