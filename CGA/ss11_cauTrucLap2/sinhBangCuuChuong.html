@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+    <style>
+        table{
+            width: 1000px;
+        }
+        table, tr, td{
+            border: 1px solid black;
+        }
+        td{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<script>
+    document.write('<table>');
+    for (let i = 1; i <= 9; i++) {
+        document.write('<tr>');
+        for (let j = 2; j <= 9; j++) {
+            let k = i * j;
+            document.write('<td>' + j + ' x ' + i + ' = ' + k + '</td>');
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+</script>
+</body>
+</html>

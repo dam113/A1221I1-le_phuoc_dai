@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let Num = Number(prompt('nhập số lương nguyên tố'));
+    let Count = 0;
+    let N = 2;
+    while (Count < Num) {
+        let a = 0;
+        for (let i = 1; i <= N; i++) {
+            if (N % i === 0) {
+                a++;
+            }
+        }
+        if (a === 2) {
+            document.write(''+ N + 'là số nguyên tố' + '<br>');
+            Count++;
+        }
+        N++;
+    }
+</script>
+</body>
+</html>

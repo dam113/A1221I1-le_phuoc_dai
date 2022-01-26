@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<body>
+<p> Nhập số tiền vay ban đầu<br>
+    Nhập số tháng cho vay<br>
+    lãi xuất hàng tháng = 0.005%
+</p>
+<label>Tiền vay (Góc):</label>
+<input type="text" id="money">
+<label>Số tháng cho vay:</label>
+<input type="text" id="month">
+<input type="submit" value="lãi ngân hàng" onclick="interest_rate()">
+<p id="rate"></p>
+<script>
+    function interest_rate() {
+        let money = Number(document.getElementById('money').value);
+        let month = Number(document.getElementById('month').value);
+        for (let i = 1; i <= month; i++) {
+            money = money + money * 0.005;
+        }
+        document.getElementById('rate').innerHTML = 'Tiền góc cả lãi của bạn sau ' + month + '= ' + money + ' VND';
+    }
+</script>
+</body>
+</body>
+</html>

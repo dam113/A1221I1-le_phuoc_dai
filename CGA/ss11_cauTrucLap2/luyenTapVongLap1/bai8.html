@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button onclick="start()">Bắt đầu</button>
+<script>
+    function start() {
+        let a = Number(prompt('Nhập a của [a, b]'));
+        let b = Number(prompt('Nhập b của [a, b]'));
+        if (a > b) {
+            alert('Vui lòng nhập a nhỏ hơn b');
+        } else {
+            const getRandomInt = (min, max) => {
+                return Math.floor(Math.random() * (min - max)) + max;
+            };
+            let c = getRandomInt(a, b);
+            for (let i = 1; i <= 3; i++) {
+                let d = Number(prompt('Bạn đoán số nào'));
+                if (d === c) {
+                    alert('Chúc mừng');
+                    break;
+                }else if(d > c){
+                    alert('Bạn đã lựa chọn lớn hơn số trúng');
+                }else {
+                      alert('Bạn đã lựa chọn nhỏ hơn số trúng');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

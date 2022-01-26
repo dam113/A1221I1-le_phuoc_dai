@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let n1 = 0, n2 = 1, nextTerm;
+    for (let i = 1; i <= 20; i++) {
+        document.write(n1 + '<br>');
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+        if (n1 % 5 === 0){
+            document.write('Số đầu tiên trong dãy fibonacci chia hết cho 5 là ' + n1);
+            break;
+        }
+    }
+</script>
+</body>
+</html>
