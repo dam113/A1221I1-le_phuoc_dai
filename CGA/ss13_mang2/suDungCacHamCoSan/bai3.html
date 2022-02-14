@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển chữ hoa - thường</title>
+</head>
+<body>
+<script>
+    let str = prompt('');
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for (let x = 0; x < str.length; x++) {
+        if (UPPER.includes(str[x])) {
+            result.push(str[x].toLowerCase());
+        } else if (LOWER.includes(str[x])) {
+            result.push(str[x].toUpperCase());
+        } else {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>

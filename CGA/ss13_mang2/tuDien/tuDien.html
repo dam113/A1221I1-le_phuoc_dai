@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<input type="text" id="engLish" placeholder="nhap tu dien">
+<input type="submit" onclick="tran()" value="Dịch">
+<p id="result"></p>
+<script>
+    function tran() {
+        let x = document.getElementById('engLish').value;
+        let english = ["hi","bye"];
+        let vietnam = ["chào","tạm biệt"];
+        for (let i = 0; i < english.length; i++){
+            if (x === english[i]){
+                console.log(vietnam[i])
+                let a = vietnam[i];
+                document.getElementById('result').innerHTML = '' + a;
+            }else {
+                document.getElementById('result').innerHTML = 'Không tìm thấy kết quả';
+            }
+        }
+    }
+</script>
+</body>
+</html>
