@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp mảng</title>
+</head>
+<body>
+<script>
+    //khởi tạo mảng và dùng vòng for để nhập giá trị cho mảng
+    let array = [];
+    let n = Number(prompt('Nhập độ dài của mảng = '));
+    for (let i = 0; i < n; i++){
+        array[i] = Number(prompt('Nhấp số thứ ' + (i+1) + ' = '));
+    }
+
+    document.write('Mảng ban đầu = ' + array.join() + '<br/>');
+    //Sắp xếp mảng
+    for (let j = 0;j < array.length - 1;j++){
+        for (let k = j+1; k < array.length;k++){
+            if(array[k] > array[j]){
+                let temp = array[k];
+                array[k] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+    document.write('Mảng sau khi sắp xếp = ' + array.join());
+</script>
+</body>
+</html>

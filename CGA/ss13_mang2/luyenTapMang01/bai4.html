@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    //khởi tạo mảng và nhập giá trị cho mảng
+    let array = new Array()
+    let n = prompt('Nhập độ dài của mảng = ');
+    for (let i = 0; i < n; i++){
+        array[i] = prompt('Nhấp số thứ ' + (i+1) + ' = ');
+        document.write('Số thứ ' + (i+1) + ' = ' + array[i] + '<br/>');
+    }
+
+    //đảo ngược mảng
+    let a = array.reverse();
+    document.write('Mảng sau khi đảo ngược là ' + a.join(''));
+</script>
+</body>
+</html>

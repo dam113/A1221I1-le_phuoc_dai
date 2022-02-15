@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //tạo 1 mảng
+    let array = [2,11,10,3,6,2,9,13,24,37,1,4,5,6];
+    let max = array[0];//gán max cho phần tử đầu tiên
+    let a;// khởi tạo biến chứa vị trí của số lớn nhất
+    let sum = 0; // khởi tạo biến tính tổng của mảng
+    //tìm giá trị max của mảng
+    for(let i = 0; i < array.length; i++){
+        if(array[i] > max){
+            max = array[i];
+            a = i;
+        }
+        sum = array[i] + sum;
+    }
+    //tính trung bình mảng
+    let avg = sum/(array.length);
+    //in ra giá trị max và giá trị trung bình của mảng
+    document.write('số lớn nhất = ' + max  + ' nằm ở vị trí của max nằm trong mảng là : ' + a + '<br/>');
+    document.write('Giá trị trung bình của mảng = ' + avg);
+</script>
+</body>
+</html>

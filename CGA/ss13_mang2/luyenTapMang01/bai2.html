@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chường trình tìm số Max trong array và hiển thị ví trí của số max trong mảng</title>
+</head>
+<body>
+<script>
+    let array = [2,11,10,3,6,2,9,13,24,37,1,4,5,6];
+    let max = array[0];
+    let a;
+    for(let i = 1; i < array.length; i++){
+        if(array[i] > max){
+            max = array[i];
+            a = i;
+        }
+    }
+    document.write('số lớn nhất = ' + max  + ' nằm ở vị trí của max nằm trong mảng là : ' + a);
+</script>
+</script>
+</body>
+</html>

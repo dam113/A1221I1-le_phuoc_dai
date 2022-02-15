@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Khởi tạo mảng
+    let array = [2,5,4,8,3,10,11,53,7,14];
+    let num = prompt('Nhập số nguyên V = ');
+    let check = false;//Gán biến check = false
+    //Nếu số nguyên V = 1 trong các giá trị của mảng thì biến check gán = true
+    for (let i = 0; i < array.length; i++){
+        if(Number(num) === array[i]){
+            check = true;
+        }
+    }
+
+    //Kiểm tra và in V có phải giá trị trong bảng hay không?
+    if(check === true){
+        document.write('V is in the array');
+    }else {
+        document.write('V is not in the array');
+    }
+</script>
+</body>
+</html>

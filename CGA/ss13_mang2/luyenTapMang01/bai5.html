@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = new Array();
+    let dem = 0;
+    let n = prompt('Nhập độ dài của mảng = ');
+    for (let i = 0; i < n; i++){
+        array[i] = prompt('Nhấp số thứ ' + (i+1) + ' = ');
+        document.write('Số thứ ' + (i+1) + ' = ' + array[i] + '<br/>');
+        if(array[i] < 0){
+            dem++;
+        }
+    }
+    document.write('Có ' + dem + 'số nguyên âm');
+</script>
+</body>
+</html>
