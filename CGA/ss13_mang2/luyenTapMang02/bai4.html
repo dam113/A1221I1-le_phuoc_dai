@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số trong 1 chuổi</title>
+</head>
+<body>
+<script>
+    //nhập 1 chuổi
+    let a = prompt('Nhập 1 chuỗi ký tự = ');
+    //tạo biến num chưa các số từ 0->9
+    let num = '0123456789'
+    //tạo biến dem để đếm số lượng chữ số có trong chuỗi
+    let dem = 0;
+    document.write('Mảng của bạn nhập vào có độ dài = ' + a.length + '<br/>');
+    for(let i = 0; i < a.length; i++){
+        //dùm hàm includes() để check xem a[] có nằm trong chuỗi num hay ko
+        if(num.includes(a[i])){
+            dem++;
+        }
+    }
+    document.write('Chuỗi của bạn có ' + dem + ' chữ số');
+</script>
+</body>
+</html>

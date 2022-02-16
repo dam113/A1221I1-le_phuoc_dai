@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thay ký tự '-' thành '_'</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập 1 chuổi bất kỳ');
+    let b = a.split('');
+    document.write('Chuổi ban đầu : ' + b.join('') + '<br/>');
+    for (let i = 0; i < b.length; i++) {
+        if (b[i] === '-' ){
+            b[i] = '_';
+        }
+    }
+    document.write('Chuổi sau khi đổi dấu - thanh _ : ' + b.join(''));
+</script>
+</body>
+</html>

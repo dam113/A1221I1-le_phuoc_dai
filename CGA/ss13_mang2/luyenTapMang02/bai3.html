@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số ký tự trong mảng</title>
+</head>
+<body>
+<script>
+    //nhập 1 chuổi
+    let a = prompt('Nhập 1 chuỗi ký tự = ');
+    //tạo biến chat chưa các ký tự từ a->z và A->Z
+    let chat = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    //tạo biến dem để đếm số lượng ký tự có trong chuỗi
+    let dem = 0;
+    document.write('Mảng của bạn nhập vào có độ dài = ' + a.length + '<br/>');
+    for(let i = 0; i < a.length; i++){
+        //dùm hàm includes() để check xem a[] có nằm trong chuỗi chat hay ko
+        if(chat.includes(a[i])){
+            dem++;
+        }
+    }
+    document.write('Chuỗi của bạn có ' + dem + ' ký tự');
+</script>
+</body>
+</html>

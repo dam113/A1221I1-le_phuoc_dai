@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so sánh 2 chuổi</title>
+</head>
+<body>
+<script>
+    //Nhập 2 chuổi
+    let a = prompt('Nhập chuỗi thứ 1 : ');
+    let b = prompt('Nhập chuổi thứ 2 : ');
+    //tạo 1 biến dem để đếm số lượng phần từ trong chuổi giống nhau
+    let dem = 0;
+    //trường hợp nếu độ dài mảng a = độ dài mảng b
+    if(a.length === b.length){
+        for (let i = 0; i < a.length;i++){
+            if(a[i] === b[i]){
+                dem++
+            }
+        }
+        //trường hợp biến dem = độ dài mảng a or b
+        if(dem === a.length){
+            document.write('Chuổi 1 giống với chuổi 2');
+        }else {
+            document.write('Chuổi 1 không giống với chuổi 2');
+        }
+    }else {
+        document.write('Chuổi 1 không giống với chuỗi 2');
+    }
+
+</script>
+</body>
+</html>
