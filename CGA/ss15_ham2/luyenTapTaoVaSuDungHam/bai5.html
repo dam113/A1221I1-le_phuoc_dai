@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<script>
+    function checkarray(a) {
+        let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        for (let i = 0; i < array1.length; i++) {
+            if (a === array1[i]) {
+                return array2[i];
+            }
+        }
+    }
+
+    while (true) {
+        let b = prompt('Nhập ngôi sao cần tìm');
+        if (checkarray(b) != null) {
+            alert('Chòm sao tương tự là ' + checkarray(b));
+        } else {
+            alert('Không có chòm sao tương ứng');
+        }
+    }
+</script>
+</body>
+</html>
