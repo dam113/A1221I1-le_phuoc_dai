@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiếm Tra từ dối xứng</title>
+</head>
+<body>
+<script>
+    function isPalindrome(s) {
+        let a = s.length / 2;
+        for (let i = 0; i < a; i++) {
+            if (s[i] !== s[s.length - i - 1]) {
+                return false;
+                break;
+            }
+        }
+        return true;
+    }
+
+    let chuoi = prompt('Nhập vào 1 chuổi bất kỳ');
+    let chuoi_N = chuoi.split('');
+    if (isPalindrome(chuoi_N)){
+        document.write('Chuổi "' + chuoi_N.join('') + '" là 1 chuổi đối xứng');
+    }else {
+        document.write('Chuổi "' + chuoi_N.join('') + '" không phải là 1 chuổi đối xứng');
+    }
+</script>
+</body>
+</html>
