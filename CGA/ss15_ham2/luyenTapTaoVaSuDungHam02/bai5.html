@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let min = 0;
+    function valueMin(num1,num2,num3) {
+        min = num1;
+        if(num2 < min){
+            min = num2;
+        }
+        if(num3 < min){
+            min = num3;
+        }
+        return min;
+    }
+    let a = Number(prompt('Nhập số thứ nhất : '));
+    let b = Number(prompt('Nhập số thứ hai : '));
+    let c = Number(prompt('Nhập số thứ ba : '));
+
+    document.write('Số có giá trị nhỏ nhất : ' + valueMin(a,b,c));
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    function CountChar(array,char) {
+        dem = 0
+        for (let i = 0; i < array.length; i ++){
+            if (array[i] === char){
+                dem++;
+            }
+        }
+        return dem++;
+    }
+    let arr = prompt('Nhập 1 chuỗi bất kỳ');
+    let array_N = arr.split('');
+    let st = prompt('Nhập 1 ký tự bất kỳ');
+    if (CountChar(array_N,st) === 0){
+        document.write('Ký tự ' + st + ' không xuất hiện có trong chuỗi "' + array_N.join('') + '"');
+    }else {
+        document.write('Ký tự ' + st + ' xuất hiện ' + CountChar(array_N,st) + ' trong chuỗi "' + array_N.join('') + '"');
+    }
+</script>
+</body>
+</html>

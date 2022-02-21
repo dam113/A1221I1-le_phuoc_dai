@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let num = '0123456789';
+    function checkNum(x) {
+        if(num.includes(x)) {
+            return true;
+        }
+    }
+    let a = prompt('Nhập ký tự bất kỳ');
+    if(checkNum(a)){
+        document.write('Ký tự nhập vào là ký tự số');
+    }else {
+        document.write('Ký tự nhập vào không phải là ký tự số');
+    }
+</script>
+</body>
+</html>
