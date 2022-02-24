@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Hình Chữ Nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class Rectangle {
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getArea(){
+            return this.length * this.width;
+        }
+        getCircuit(){
+            return (this.length + this.width) * 2;
+        }
+
+        setLength(length){
+            this.length = length;
+        }
+        setWidth(width){
+            this.width = width;
+        }
+
+        createRectangle(){
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            let color = getRandomColor();
+            let canvas = document.getElementById("myCanvas");
+            if (canvas.getContext)
+            {
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle= color;
+                ctx.fillRect(x, y, this.width, this.length);
+            }
+        }
+    }
+    function getRandomHex(){
+        return Math.floor(Math.random()*255);
+    }
+
+    function getRandomColor(){
+        let red = getRandomHex();
+        let green = getRandomHex();
+        let blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+    //tạo 1 hình chữ nhật
+    let data = new Rectangle(300,600);
+    data.createRectangle();
+    //đặt lại chiều rộng và chiều dài của hình chữ nhật
+    data.setLength(200);
+    data.setWidth(300);
+    //In S và C của hình chữ nhật mới đặt lại chiều dài và chiều rộng
+    console.log(data.getArea());
+    console.log(data.getCircuit());
+</script>
+</body>
+</html>

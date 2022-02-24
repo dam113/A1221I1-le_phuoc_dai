@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+        }
+        getCToF(){
+            return this.c * 1.8 - 32;
+        }
+        getCToKelvin(){
+            return this.c + 273.15;
+        }
+    }
+
+    let temp = Number(prompt('Nhập độ C = '));
+    while (temp < -273){
+        temp = Number(prompt('Nhập lại độ C = '));
+    }
+    let data = new Temperature(temp);
+    alert('Độ F = ' + data.getCToF(temp));
+    alert('Độ kelvin = ' + data.getCToKelvin(temp));
+</script>
+</body>
+</html>

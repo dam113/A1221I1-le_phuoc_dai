@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+<script>
+    // <!--  Cú pháp khai báo  -->
+    // class ClassName {
+    //      constructor(tham số 1, tham số 2,..){
+    //              this.thuộc tính 1= tham số 1;
+    //              this.thuộc tính 2= tham số 2;
+    //              this.....;
+    //         }
+    // }
+    class MyDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        getDay() {
+            return this.day;
+        }
+
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year;
+        }
+
+        setDay(day){
+            this.day = day;
+        }
+        setMonth(month){
+            this.month = month;
+        }
+        setYear(year){
+            this.year = year;
+        }
+
+        setDate(day, month, year){
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        toString(){
+            return this.day + "/" + this.month + "/" + this.year;
+        }
+    }
+
+
+
+    let obj1 = new MyDate(21, 2, 2022);
+    let day = obj1.getDay(); // 21
+
+    let month = obj1.getMonth(); // 2
+
+    let year = obj1.getYear(); // 2022
+
+    alert(day + "/" + month + "/" + year);
+
+    obj1.setDay(22);
+    obj1.setMonth(2);
+    obj1.setYear(2022);
+    alert(obj1.toString());
+
+    obj1.setDate(23,2,2022);
+    alert(obj1.toString());
+
+
+</script>
+</body>
+</html>

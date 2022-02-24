@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(pin, mess, inbox, sent) {
+            this.pin = pin;
+            this.mess = mess;
+            this.inbox = inbox;
+            this.sent = sent;
+        }
+
+        getTurnOn() {
+            check = true;
+        }
+
+        getTurnOff() {
+            check = false;
+        }
+
+        //Check mobile có đang bật hay ko
+        checkMobile() {
+            if (check) {
+                return 1;
+            }
+        }
+
+        //Chức năng xạc pin
+        charge() {
+            return this.pin++;
+        }
+
+        //Chức năng soạn tin nhắn
+        textting() {
+            let temp = prompt('Soạn văn bản');
+            this.mess = temp;
+        }
+
+        //Chức năng nhận tin nhắn từ điện thoại khác
+        receiveMess(inbox) {
+            let temp = [];
+            temp = +inbox;
+            this.inbox = temp;
+        }
+
+        //Chức năng gửi tin nhắn đến điện thoại khác
+        sentMess(sent) {
+            let temp = [];
+            temp = +sent;
+            this.sent = temp;
+        }
+
+        //Chức năng xem tin nhắn trong hộp tư đến
+        seeInbox() {
+            return this.inbox;
+        }
+
+        //Chức năng xem tin nhắn trong tin đã gửi
+        seeSent() {
+            return this.sent;
+        }
+    }
+
+    let check = false;
+    let phone1 = new Mobile(95, '', '', '');
+    let phone2 = new Mobile(95, '', '', '');
+    if (phone1.checkMobile() === 1) {
+        let temp = phone1.textting();
+        phone1.sentMess(temp);
+        phone2.receiveMess(temp);
+        alert('Tin nhắn ở Mobile 2 ' + phone2.seeInbox());
+    } else {
+        phone1.getTurnOn();
+    }
+</script>
+</body>
+</html>
