@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    class Mobile {
+        constructor() {
+            this.pin = 100;
+            this.receivedMessage = [];
+            this.sentMessage = [];
+            this.status = true;
+        }
+        // Kiểm tra điện thoại đang bật hay tắt
+        isOnOff(){
+            if (this.status === true){
+                console.log("Dien thoai dang bat!")
+            } else {
+                console.log("Dien thoai dang tat!")
+            }
+        }
+        // Tắt hoặc bật điện thoại.
+        onOffMobile(){
+            this.status = !this.status;
+        }
+        chargeMobile(){
+            this.pin = 100 ;
+        }
+        // message: Nội dung tin nhắn gửi đi.
+        // mobile: Đối tượng nhận tin nhắn.
+        sendMsg(message, mobile){
+            // Lưu tin nhắn gửi vào thuộc tính sentMessage của đối tượng gửi tin nhắn.
+            this.sentMessage.push(message);
+            // Lưu tin nhắn vào thuộc tính receivedMessage của đối tượng nhận đươcn tin nhắn.
+            mobile.receivedMessage.push(message);
+            this.pin--;
+        }
+        getReceivedMessage(){
+            return this.receivedMessage;
+        }
+        getSentMessage(){
+            return this.sentMessage;
+        }
+    }
+    let nokia = new Mobile();
+    let iphone = new Mobile()
+    nokia.isOnOff();
+    nokia.onOffMobile();
+    nokia.sendMsg("Hello Iphone!!", iphone)
+    nokia.sendMsg("Byeee Iphone!!", iphone)
+    console.log(nokia);
+    console.log("--------------------------------------------------");
+    console.log(iphone);
+</script>
+</html>
