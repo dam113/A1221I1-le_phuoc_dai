@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+<div id="game"></div>
+<button onclick="act('top')">top</button>
+<button onclick="act('left')">left</button>
+<button onclick="act('right')">right</button>
+<button onclick="act('bottom')">bottom</button>
+<script>
+    function Hero(image, top, left, size, speed){
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size
+        this.speed = speed;
+
+        this.getHeroElement = function(){
+            return '<img width="'+ this.size + '"' +
+                ' height="'+ this.size + '"' +
+                ' src="' + this.image +'"' +
+                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+        }
+
+        this.moveRight = function(){
+            this.left += this.speed;
+            console.log('ok: ' + this.left);
+        }
+
+        this.moveLeft = function() {
+            this.left -= this.speed;
+            console.log('ok: ' + this.left);
+        }
+
+        this.moveTop = function() {
+            this.top -= this.speed;
+            console.log('ok: ' + this.top);
+        }
+
+        this.moveBottom = function() {
+            this.top += this.speed;
+            console.log('ok: ' + this.top);
+        }
+    }
+
+    let sp = parseInt(prompt('Nhập tốc độ di chuyển của nhân vật'));
+    let hero = new Hero('naruto.png', 50, 50, 200, sp);
+    document.getElementById('game').innerHTML = hero.getHeroElement();
+    function act(a){
+        if (a == 'top'){
+            if(hero.top < 70){
+                hero.top = 50;
+                document.getElementById('game').innerHTML = hero.getHeroElement();
+            }else {
+                hero.moveTop();
+                document.getElementById('game').innerHTML = hero.getHeroElement();
+            }
+        }
+        if(a == 'bottom'){
+            if (hero.top > window.innerHeight - hero.size - 50){
+                hero.top = window.innerHeight - hero.size;
+                document.getElementById('game').innerHTML = hero.getHeroElement();
+            }else {
+                hero.moveBottom();
+                document.getElementById('game').innerHTML = hero.getHeroElement();
+            }
+        }
+        if (a == 'left'){
+            if (hero.left < 70){
+                hero.left = 50;
+                document.getElementById('game').innerHTML = hero.getHeroElement();
+            }else {
+                hero.moveLeft();
+                document.getElementById('game').innerHTML = hero.getHeroElement();
+            }
+        }
+        if (a == 'right'){
+            if (hero.left > window.innerWidth - hero.size - 50 ){
+                hero.left = window.innerWidth - hero.size;
+                document.getElementById('game').innerHTML = hero.getHeroElement();
+            }else {
+                hero.moveRight();
+                document.getElementById('game').innerHTML = hero.getHeroElement();
+            }
+        }
+    }
+</script>
+</body>
+</html>
