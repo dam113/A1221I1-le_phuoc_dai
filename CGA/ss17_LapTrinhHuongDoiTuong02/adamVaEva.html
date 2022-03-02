@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = this.weight - weight;
+        }
+    }
+
+    class humal {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = this.weight + weight;
+        }
+
+        say(mess) {
+            console.log(mess);
+        }
+
+        checkApple(apple) {
+            if (apple.weight > 0) {
+                return apple.weight;
+            } else {
+                return 0;
+            }
+        }
+
+        eat(apple) {
+            if (this.checkApple(apple) > 0) {
+                this.setWeight(1);
+                apple.setWeight(1);
+            } else {
+                apple.setWeight(0);
+                this.setWeight(0);
+            }
+        }
+    }
+
+    let apple1 = new apple();
+    let human1 = new humal('Nam', 'Nam', 57);
+    let human2 = new humal('thảo', 'Nữ', 57);
+
+    human1.say('Chào ' + human2.getName());
+    human2.say('Chào ' + human1.getName());
+
+    console.log('Cân năng của quả táo = ' + apple1.weight);
+    console.log('Cân năng của Nam = ' + human1.weight);
+    human1.eat(apple1);
+    console.log('Cân năng của Nam = ' + human1.weight);
+    console.log('Cân năng của táo = ' + apple1.weight);
+
+</script>
+</body>
+</html>
