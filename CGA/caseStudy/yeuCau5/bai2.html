@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 - Yêu câu 2</title>
+</head>
+<body>
+<script>
+    function promptArr() {
+        let m = Number(prompt('Nhập kích thức m '));
+        let n = Number(prompt('Nhập kích thức n '));
+        let b = [];
+        for (let i = 0; i < n; i++) {
+            let a = [];
+            for (let j = 0; j < m; j++) {
+                let c = Number(prompt('Nhập phần tử A[' + i + '][' + j + ']'));
+                a.push(c);
+            }
+            b.push(a);
+        }
+        return b;
+    }
+
+    function checkNum(c) {
+        if (c === 1) {
+            return 0;
+        } else if (c === 2) {
+            return 1;
+        } else {
+            for (let i = 2; i < c; i++) {
+                if (c % i === 0) {
+                    return 0;
+                } else {
+                    return 1;
+                }
+            }
+        }
+    }
+
+    let arr = promptArr();
+    let count = 0;
+    let array = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            let a = checkNum(arr[i][j]);
+            if (a === 1) {
+                count++;
+                array.push(arr[i][j]);
+            }
+        }
+    }
+    console.log('Có ' + count + ' số nguyên tố');
+    console.log('Gồm: ' + array.join(' '));
+</script>
+</body>
+</html>

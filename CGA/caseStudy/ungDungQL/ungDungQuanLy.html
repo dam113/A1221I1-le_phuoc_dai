@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý</title>
+</head>
+<style>
+    #content th,tr,td{
+        padding: 5px;
+    }
+    #content button{
+        padding: 5px;
+        color: white;
+        background: #022a5e;
+        font-size: 14px;
+        border: #1d72e1 solid 0.5px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+<h3>
+    Add New Products
+</h3>
+<input type="text" id="productName" placeholder="Enter new product name">
+<input type="text" id="productPrice" placeholder="Enter new product price">
+<button onclick="createNewProduct()">ADD</button>
+<h3>
+    Display All Product
+</h3>
+<div id="content">
+
+</div>
+
+</body>
+<script>
+    class Product{
+        constructor(name,price) {
+            this.name = name;
+            this.price = price;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getName(){
+            return this.name;
+        }
+        setPrice(price){
+            this.price = price;
+        }
+        getPrice(){
+            return this.price;
+        }
+    }
+
+    let productList = [];
+    productList[0] = new Product("Sony Xperia", 4000000);
+    productList[1] = new Product("Samsung Galaxy", 3000000);
+    productList[2] = new Product("Nokia 6", 5000000);
+    productList[3] = new Product("Xiaomi redmi Note 4", 5500000);
+    productList[4] = new Product("Apple Iphone 6s", 7000000);
+    productList[5] = new Product("Xiaomi Mi 5s Plus", 3500000);
+    productList[6] = new Product("Oppo A71", 3500000);
+
+
+    function displayProduct(){
+        let table = '<table border="1px" style="border-collapse: collapse; text-align: center;">' +
+            ' <tr> <th>Product Name</th> ' +
+            '<th>Product Price</th> ' +
+            '<th colspan="2">' + productList.length + ' products</th> </tr>';
+        for (let i = 0; i < productList.length; i++) {
+            table += '<tr><td>' + productList[i].getName() + ' </td>' +
+                '<td>' + productList[i].getPrice() + ' </td>' +
+                ' <td> <button onclick="editProduct(' + i + ')">Edit</button> </td>' +
+                ' <td> <button onclick="deleteProduct(' + i + ')">Delete</button> </td>' +
+                ' </tr>';
+        }
+        table += '</table>';
+        document.getElementById("content").innerHTML = table;
+    }
+    function deleteProduct(index) {
+        productList.splice(index, 1);
+        displayProduct();
+    }
+    function editProduct(index) {
+        alert("Bạn đang thay đổi điện thoại " + productList[index].getName());
+        let a = prompt("Nhập tên product muốn chỉnh sửa ");
+        let b = prompt("Nhập lại giá tiền product muốn chỉnh sửa");
+        productList[index].setName(a);
+        productList[index].setPrice(b);
+        displayProduct();
+    }
+    function createNewProduct() {
+        let productName = document.getElementById("productName").value;
+        let productPrice = document.getElementById("productPrice").value;
+        let product = new Product(productName,productPrice);
+        productList.push(product);
+        displayProduct();
+        document.getElementById("productName").value = "";
+        document.getElementById("productPrice").value = "";
+    }
+    displayProduct();
+</script>
+</html>

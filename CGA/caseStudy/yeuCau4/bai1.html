@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 - yêu cầu 1</title>
+</head>
+<body>
+<script>
+  function standardized(name) {
+      name = name.trim().toLowerCase();
+      let nameArray = Array.from(name);
+      for (let i = 0; i < nameArray.length - 1; i++){
+          if (nameArray[i] === " " && nameArray[i + 1] === " "){
+              for (let j = i + 1; j < nameArray.length - 1; j++){
+                  nameArray[j] = nameArray[j + 1];
+              }
+              i--;
+              nameArray.pop();
+          }
+      }
+      nameArray[0] = nameArray[0].toUpperCase();
+      for (let i =0; i < nameArray.length - 1; i++){
+          if (nameArray[i] === " "){
+              nameArray[i + 1] = nameArray[i + 1].toUpperCase();
+          }
+      }
+      return nameArray.join("");
+  }
+  function maxlength(name) {
+      let arrName = name.split(" ");
+      let maxName = arrName[0];
+      for (let i = 1; i < arrName.length; i++){
+          if (maxName.length < arrName[i].length){
+              maxName = arrName[i];
+          }
+      }
+      return maxName;
+  }
+
+  let name = prompt("Nhập vào tên : ");
+  alert("Tên ban đầu là : " + name +
+      "\n Tên chuẩn hóa là: " + standardized(name) +
+  "\n Từ có độ dài lớn nhất là : " + maxlength(standardized(name)));
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 - yêu cầu 3</title>
+</head>
+<body>
+<script>
+    function inputArr() {
+        let a = [];
+        let n = parseInt(prompt('nhập độ dài của mảng '));
+        for (let i = 0; i < n; i++){
+            a[i] = parseInt(prompt('Nhập phần tử thứ ' + (i + 1) ));
+        }
+        return a;
+    }
+
+    function checkArr(arr1, arr2) {
+        let a = []
+        for (let i = 0; i < arr1; i++){
+            for (let j = 0; j < arr2; j ++){
+                if (arr1[i] === arr2[j]){
+                    a.push(arr1);
+                    arr1.splice(i,1);
+                }
+            }
+        }
+        return a;
+    }
+
+    let a = inputArr();
+    let b = inputArr();
+    console.log(checkArr(a,b));
+</script>
+</body>
+</html>

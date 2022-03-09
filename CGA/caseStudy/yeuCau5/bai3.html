@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 - Yêu cầu 5</title>
+</head>
+<body>
+<script>
+    function promptArr() {
+        let m = Number(prompt('Nhập kích thức m '));
+        let n = Number(prompt('Nhập kích thức n '));
+        let b = [];
+        for (let i = 0; i < n; i++) {
+            let a = [];
+            for (let j = 0; j < m; j++) {
+                let c = Number(prompt('Nhập phần tử A[' + i + '][' + j + ']'));
+                a.push(c);
+            }
+            b.push(a);
+        }
+        return b;
+    }
+    function minMax(arr) {
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++){
+            for (let j = 0; j < arr[i].length; j++){
+                if (arr[i][j] > max){
+                    max = arr[i][j];
+                }
+            }
+        }
+        return max;
+    }
+
+    let c = promptArr();
+    console.log(minMax(c));
+</script>
+</body>
+</html>

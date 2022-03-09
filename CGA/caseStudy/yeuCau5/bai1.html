@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 - Yêu Cầu 5</title>
+</head>
+<body>
+<script>
+    function promptArr() {
+        let m = Number(prompt('Nhập kích thức m '));
+        let n = Number(prompt('Nhập kích thức n '));
+        let b = [];
+        for (let i = 0; i < n; i++){
+            let a = [];
+            for (let j = 0; j < m; j++){
+                let c = Number(prompt('Nhập phần tử A[' + i +'][' + j + ']'));
+                a.push(c);
+            }
+            b.push(a);
+        }
+        return b;
+    }
+
+    function sumArrEven(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++){
+            for (let j = 0; j < arr[i].length; j++){
+                if (arr[i][j] % 2 === 0){
+                    sum += arr[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
+    let c = promptArr();
+    console.log(c);
+    console.log(sumArr(c));
+</script>
+</body>
+</html>

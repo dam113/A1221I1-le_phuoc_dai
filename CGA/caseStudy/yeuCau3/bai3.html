@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 - yêu cầu 3</title>
+</head>
+<body>
+<script>
+    function inputArr() {
+        let a = [];
+        let n = parseInt(prompt('nhập độ dài của mảng '));
+        for (let i = 0; i < n; i++){
+            a[i] = parseInt(prompt('Nhập phần tử thứ ' + (i + 1) ));
+        }
+        return a;
+    }
+
+    function maxFraction(arr1, arr2) {
+        let a = [];
+        for (let i = 0; i < arr1.length; i++){
+            a[i] = arr1[i] / arr2[i]
+        }
+        let max = a[0];
+        let index = 0;
+        for (let j = 0; j < a.length; j++){
+            if (a[j] > max){
+                max = a[j];
+                index = j;
+            }
+        }
+        return [max, index];
+    }
+
+    let a = inputArr();
+    let b = inputArr();
+
+    let c = maxFraction(a,b);
+    console.log(c[0] + " là phân số lớn nhất, có chỉ số là " + c[1]);
+</script>
+</body>
+</html>
