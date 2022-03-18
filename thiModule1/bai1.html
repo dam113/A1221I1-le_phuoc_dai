@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            let dem = 0;
+            for (let i = 2; i <= number; i++) {
+                if (number % i === 0) {
+                    dem++;
+                }
+            }
+            if (dem === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    let a = [];
+    let b = [];
+    let n = parseInt(prompt('Nhập vào số phần tử của mảng '));
+    if (n > 0 && n < 50) {
+        for (let i = 0; i < n; i++) {
+            a[i] = parseInt(prompt('Nhập phần từ A[' + i + '] '));
+        }
+    } else {
+        n = parseInt(prompt('Nhập vào số phần tử của mảng '));
+    }
+    document.write('Mảng của a gồm ' + a.join(' ') + '<br>');
+    for (let i = 0; i < a.length; i++) {
+        if (isPrime(a[i])) {
+            b.push(a[i]);
+        }
+    }
+    document.write('Mảng của b gồm ' + b.join(' '));
+</script>
+</body>
+</html>

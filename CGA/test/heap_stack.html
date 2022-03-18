@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function arr(num){
+        let temp;
+        temp = num[0];
+        num[0] = num[1];
+        num[1] = temp;
+    }
+
+    function num(num1, num2) {
+        let temp;
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+    }
+    //pass by value
+    let number1 = 5;
+    let number2 = 7;
+    console.log(number1);
+    console.log(number2);
+    num(number1, number2);
+    console.log(number1);
+    console.log(number2);
+
+    //pass by reference
+    let a = [number1, number2];
+    console.log(a[0]);
+    console.log(a[1]);
+    arr(a);
+    console.log(a[0]);
+    console.log(a[1]);
+
+</script>
+</body>
+</html>

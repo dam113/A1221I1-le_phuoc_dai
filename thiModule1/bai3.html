@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sổ Tiết Kiệm</title>
+    <style>
+        #content th,tr,td{
+            padding: 5px;
+        }
+        #content button{
+            padding: 5px;
+            color: white;
+            background: #022a5e;
+            font-size: 14px;
+            border: #1d72e1 solid 0.5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<h3>
+    Add New Sổ tiết kiệm
+</h3>
+<input type="text" id="maSo" placeholder="Enter new mã số tiết kiệm">
+<input type="text" id="typeTK" placeholder="Enter new loại tiết kiệm">
+<input type="text" id="nameKH" placeholder="Enter new họ tên khách hàng">
+<input type="text" id="cmnd" placeholder="Enter new chứng minh nhân dân">
+<input type="text" id="dateMoSo" placeholder="Enter new ngày mở sổ">
+<input type="text" id="soTienGui" placeholder="Enter new số tiền gửi">
+<button onclick="createNewSoTietKiem()">ADD</button>
+<h3>
+    Display All Sổ tiết kiệm
+</h3>
+<div id="content">
+
+</div>
+<script>
+    class SoTietKiem {
+        constructor(maSo, typeTK, nameKH, cmnd, dateMoSo, soTienGui) {
+            this.maSo = maSo;
+            this.typeTK = typeTK;
+            this.nameKH = nameKH;
+            this.cmnd = cmnd;
+            this.dateMoSo = dateMoSo;
+            this.soTienGui = soTienGui;
+        }
+
+        setMaSo(maSo) {
+            this.maSo = maSo;
+        }
+
+        getMaSo() {
+            return this.maSo;
+        }
+
+        setTypeTK(typeTK) {
+            this.typeTK = typeTK;
+        }
+
+        getTypeTK() {
+            return this.typeTK;
+        }
+
+        setNameKH(nameKH) {
+            this.nameKH = nameKH;
+        }
+
+        getNameKH() {
+            return this.nameKH;
+        }
+
+        setCmnd(cmnd) {
+            this.cmnd = cmnd;
+        }
+
+        getCmnd() {
+            return this.cmnd;
+        }
+
+        setDateMoSo(dateMoSo) {
+            this.dateMoSo = dateMoSo;
+        }
+
+        getDateMoSo() {
+            return this.dateMoSo;
+        }
+
+        setSoTienGui(soTienGui) {
+            this.soTienGui = soTienGui;
+        }
+
+        getSoTienGui() {
+            return this.soTienGui;
+        }
+    }
+
+    let soTietKiem = [];
+    soTietKiem[0] = new SoTietKiem('stk001', 'loại tiết kiệm 1', 'Nguyễn văn A', 123456789, '10/3/2022', '10000000');
+    soTietKiem[1] = new SoTietKiem('stk002', 'loại tiết kiệm 2', 'Nguyễn văn B', 125656789, '09/3/2022', '20000000');
+    soTietKiem[2] = new SoTietKiem('stk003', 'loại tiết kiệm 3', 'Nguyễn văn C', 235336789, '24/2/2022', '70000000');
+    soTietKiem[3] = new SoTietKiem('stk004', 'loại tiết kiệm 4', 'Nguyễn văn D', 123455555, '11/3/2022', '25000000');
+
+    function displaySoTietKiem() {
+        let table = '<table border="1px" style="border-collapse: collapse; text-align: center;">' +
+            ' <tr> <th>Mã Số</th> ' +
+            '<th>Loại Tiết Kiệm</th> ' +
+            '<th>Họ Tên Khách Hàng</th> ' +
+            '<th>Chứng Minh Nhân Dân</th> ' +
+            '<th>Ngày mở sổ</th> ' +
+            '<th>số tiền gửi</th> ' +
+            '<th>' + soTietKiem.length + ' Số người gửi vào</th> </tr>';
+        for (let i = 0; i < soTietKiem.length; i++) {
+            table += '<tr><td>' + soTietKiem[i].getMaSo() + ' </td>' +
+                '<td>' + soTietKiem[i].getTypeTK() + ' </td>' +
+                '<td>' + soTietKiem[i].getNameKH() + ' </td>' +
+                '<td>' + soTietKiem[i].getCmnd() + ' </td>' +
+                '<td>' + soTietKiem[i].getDateMoSo() + ' </td>' +
+                '<td>' + soTietKiem[i].getSoTienGui() + ' </td>' +
+                ' <td> <button onclick="deleteSoTietKiem(' + i + ')">Delete</button> </td>' +
+                ' </tr>';
+        }
+        table += '</table>';
+        document.getElementById("content").innerHTML = table;
+    }
+
+    function deleteSoTietKiem(index) {
+        let a = confirm('Bạn có chắc chắn muốn xóa sổ tiết kiệm');
+        if (a === true){
+            soTietKiem.splice(index, 1);
+            displaySoTietKiem();
+        }else {
+            displaySoTietKiem();
+        }
+
+    }
+
+    function createNewSoTietKiem() {
+        let a;
+        let maSo = document.getElementById("maSo").value;
+        let type = document.getElementById("typeTK").value;
+        let name = document.getElementById("nameKH").value;
+        let cmnd = document.getElementById("cmnd").value;
+        let ngay = document.getElementById("dateMoSo").value;
+        let stk = document.getElementById("soTienGui").value;
+        for (let i = 0; i < soTietKiem.length; i++) {
+            if (maSo === soTietKiem[i].getMaSo()) {
+                alert('Vui lòng nhập lại vì đã có người sử dụng sổ tiết kiệm này');
+            } else {
+                a = true;
+            }
+        }
+        if (a === true) {
+            let TietKiem = new SoTietKiem(maSo, type, name, cmnd, ngay, stk);
+            soTietKiem.push(TietKiem);
+            displaySoTietKiem();
+            document.getElementById("maSo").value = "";
+            document.getElementById("typeTK").value = "";
+            document.getElementById("nameKH").value = "";
+            document.getElementById("cmnd").value = "";
+            document.getElementById("dateMoSo").value = "";
+            document.getElementById("soTienGui").value = "";
+        }
+    }
+
+    displaySoTietKiem();
+</script>
+</body>
+</html>
