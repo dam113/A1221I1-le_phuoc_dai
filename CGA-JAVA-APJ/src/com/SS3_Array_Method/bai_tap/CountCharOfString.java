@@ -11,7 +11,7 @@ public class CountCharOfString {
         int count = 0;
         for (int i = 0; i < string.length(); i++) {
             String ch = String.valueOf(string.charAt(i));
-            if ( ch.equals(x)){
+            if ( ch.equalsIgnoreCase(x)){
                 count++;
             }
         }
