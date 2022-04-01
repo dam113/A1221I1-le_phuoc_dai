@@ -1,7 +1,4 @@
 package com.SS7_AbstractClass_Interface.thuc_hanh.InterfaceComparableGeometry;
-
-import com.SS6_Inheritance.thuc_hanh.GeometricObjectSystem.Circle;
-
 public class ComparableCircle extends Circle implements Comparable<ComparableCircle>{
 
     public ComparableCircle() {
