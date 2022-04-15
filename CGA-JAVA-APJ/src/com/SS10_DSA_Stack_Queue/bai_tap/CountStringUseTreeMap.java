@@ -9,18 +9,18 @@ public class CountStringUseTreeMap {
         System.out.println("Input a string:");
         String st = new Scanner(System.in).nextLine();
         String[] a = st.toLowerCase().split("");
-        TreeMap<Character,Integer> t= new TreeMap<>();
-        int tmp=1;
+        TreeMap<Character,Integer> tree = new TreeMap<>();
+        int tmp = 1;
         for (int i = 0; i < a.length; i++) {
-            char c= a[i].charAt(0);
-            if(!t.containsKey(c)){
-                t.put(c,tmp);
+            char c = a[i].charAt(0);
+            if(!tree.containsKey(c)){
+                tree.put(c,tmp);
             }
             else{
-                t.replace(c,tmp+1);
+                tree.replace(c,tree.get(c)+1);
             }
         }
 
-        System.out.println(t);
+        System.out.println(tree);
     }
 }
