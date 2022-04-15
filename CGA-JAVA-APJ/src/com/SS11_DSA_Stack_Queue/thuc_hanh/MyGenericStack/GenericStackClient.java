@@ -1,4 +1,4 @@
-package com.SS10_DSA_Stack_Queue.thuc_hanh.MyGenericStack;
+package com.SS11_DSA_Stack_Queue.thuc_hanh.MyGenericStack;
 
 public class GenericStackClient {
     private static void stackOfIStrings() {

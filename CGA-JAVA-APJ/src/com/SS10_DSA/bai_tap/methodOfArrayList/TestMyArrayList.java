@@ -1,7 +1,4 @@
-package com.SS9_DSA.bai_tap.methodOfArrayList;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.SS10_DSA.bai_tap.methodOfArrayList;
 
 public class TestMyArrayList {
     public static void main(String[] args) {

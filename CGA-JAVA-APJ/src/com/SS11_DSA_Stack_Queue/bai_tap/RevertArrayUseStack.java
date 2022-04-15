@@ -1,4 +1,4 @@
-package com.SS10_DSA_Stack_Queue.bai_tap;
+package com.SS11_DSA_Stack_Queue.bai_tap;
 
 import java.util.Arrays;
 import java.util.Stack;

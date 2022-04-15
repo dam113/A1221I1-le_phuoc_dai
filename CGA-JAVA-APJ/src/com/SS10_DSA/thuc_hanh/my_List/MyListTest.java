@@ -1,4 +1,4 @@
-package com.SS9_DSA.thuc_hanh.my_List;
+package com.SS10_DSA.thuc_hanh.my_List;
 
 public class MyListTest {
     public static void main(String[] args) {

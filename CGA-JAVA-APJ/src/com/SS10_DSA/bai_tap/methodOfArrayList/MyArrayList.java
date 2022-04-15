@@ -1,4 +1,4 @@
-package com.SS9_DSA.bai_tap.methodOfArrayList;
+package com.SS10_DSA.bai_tap.methodOfArrayList;
 
 import java.util.Arrays;
 

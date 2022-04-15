@@ -1,4 +1,4 @@
-package com.SS9_DSA.thuc_hanh.my_linkedList;
+package com.SS10_DSA.thuc_hanh.my_linkedList;
 
 public class MyLinkedListText {
     public static void main(String[] args) {

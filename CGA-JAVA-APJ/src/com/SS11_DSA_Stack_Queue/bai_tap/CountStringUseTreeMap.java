@@ -1,5 +1,5 @@
 //Đếm số lần xuất hiện của mỗi từ trong một chuỗi sử dụng Map
-package com.SS10_DSA_Stack_Queue.bai_tap;
+package com.SS11_DSA_Stack_Queue.bai_tap;
 
 import java.util.Scanner;
 import java.util.TreeMap;
