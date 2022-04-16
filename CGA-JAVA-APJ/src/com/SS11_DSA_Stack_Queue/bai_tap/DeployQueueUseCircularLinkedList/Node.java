@@ -4,7 +4,7 @@ public class Node {
     public int data;
     public Node link;
 
-    public Node(int key) {
+    public Node(int date, Node link) {
         this.data = data;
         this.link = null;
     }
