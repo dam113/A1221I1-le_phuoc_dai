@@ -39,6 +39,7 @@ public class Main {
     }
 
     private static void sort() {
+
         arrayList.sort((o1,o2)->(int)(o1.getPrice()-o2.getPrice()));
     }
 
