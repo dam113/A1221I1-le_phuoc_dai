@@ -3,26 +3,25 @@ package com.ss14_Sort.bai_tap;
 import java.util.Scanner;
 
 public class InsertionSortByStep {
-    static int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
-
     public static void insertionSort(int[] list) {
         for (int i = 1; i < list.length; i++) {
             int key = list[i];
             int j = i - 1;
+            System.out.println("gán " + key + " cho list[" + i + "]");
             while (j >= 0 && list[j] > key) {
-                System.out.println("gán " + list[j] + " cho " + list[j + 1]);
+                System.out.println("gán " + list[j] + " cho phần tử tại index =  " + (j + 1));
                 list[j + 1] = list[j];
-                System.out.print("lish in loop while " + (j + 1) + " sort: ");
-                for (int k = 0; k < list.length; k++) {
-                    System.out.print(list[k] + "\t");
-                }
-                System.out.println();
                 j--;
             }
-            System.out.println("gán " + key + " cho phần tử "+ (j + 1) + " = " + list[j + 1]);
+            System.out.print("List after the  " + i + " sort: ");
+            for (int k = 0; k < list.length; k++) {
+                System.out.print(list[k] + "\t");
+            }
+
+            System.out.println("\n gán " + key + " cho phần tử tại index =  " + (j + 1));
             list[j + 1] = key;
 
-            System.out.print("List after the  " + i + "' sort: ");
+            System.out.print("List after the  " + i + " sort: ");
             for (int k = 0; k < list.length; k++) {
                 System.out.print(list[k] + "\t");
             }
