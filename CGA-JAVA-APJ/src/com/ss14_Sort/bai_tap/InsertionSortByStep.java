@@ -10,10 +10,16 @@ public class InsertionSortByStep {
             int key = list[i];
             int j = i - 1;
             while (j >= 0 && list[j] > key) {
-                System.out.println("Swap " + list[j] + " with " + list[j + 1]);
+                System.out.println("gán " + list[j] + " cho " + list[j + 1]);
                 list[j + 1] = list[j];
+                System.out.print("lish in loop while " + (j + 1) + " sort: ");
+                for (int k = 0; k < list.length; k++) {
+                    System.out.print(list[k] + "\t");
+                }
+                System.out.println();
                 j--;
             }
+            System.out.println("gán " + key + " cho phần tử "+ (j + 1) + " = " + list[j + 1]);
             list[j + 1] = key;
 
             System.out.print("List after the  " + i + "' sort: ");
