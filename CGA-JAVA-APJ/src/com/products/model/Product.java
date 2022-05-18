@@ -2,17 +2,21 @@ package com.products.model;
 
 public abstract class Product {
     private int id;
+    private String msp;
     private String name;
     private Double price;
+    private int soLuong;
     private String manufacturer;
 
     public Product() {
     }
 
-    public Product(int id, String name, Double price, String manufacturer) {
+    public Product(int id, String msp, String name, Double price, int soLuong, String manufacturer) {
         this.id = id;
+        this.msp = msp;
         this.name = name;
         this.price = price;
+        this.soLuong = soLuong;
         this.manufacturer = manufacturer;
     }
 
@@ -48,8 +52,24 @@ public abstract class Product {
         this.manufacturer = manufacturer;
     }
 
+    public String getMsp() {
+        return msp;
+    }
+
+    public void setMsp(String msp) {
+        this.msp = msp;
+    }
+
+    public int getSoLuong() {
+        return soLuong;
+    }
+
+    public void setSoLuong(int soLuong) {
+        this.soLuong = soLuong;
+    }
+
     @Override
     public String toString() {
-        return String.format("%s,%s,%s,%s,", id, name, price, manufacturer);
+        return String.format("%s,%s,%s,%s,%s,%s, ", id, msp, name, price, soLuong, manufacturer);
     }
 }
